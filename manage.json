@@ -1,0 +1,81 @@
+{
+  "clients": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "address": "123 Main St, City, Country",
+      "password": "encrypted_password"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "address": "456 Oak Ave, Town, Country",
+      "password": "encrypted_password"
+    },
+    {
+      "id": "3",
+      "name": "Alice Brown",
+      "email": "alice@example.com",
+      "address": "789 Elm St, City, Country",
+      "password": "encrypted_password"
+    },
+    {
+      "id": "4",
+      "name": "Vishnu ",
+      "email": "Vishnu@gmail.com",
+      "address": "main 1086,wrg",
+      "password": "Vishnu@123"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "projectName": "Website Redesign",
+      "clientId": 1,
+      "duration": "3 months",
+      "startDate": "2024-01-01",
+      "endDate": "2024-03-31",
+      "status": "ongoing"
+    },
+    {
+      "id": "2",
+      "projectName": "Mobile App Development",
+      "clientId": 2,
+      "duration": "6 months",
+      "startDate": "2024-02-01",
+      "endDate": "2024-07-31",
+      "status": "not started"
+    },
+    {
+      "id": 101,
+      "projectName": "E-commerce Website",
+      "clientId": 2,
+      "duration": "6 months",
+      "startDate": "2024-03-01",
+      "endDate": "2024-09-01",
+      "status": "In Progress"
+    }
+  ],
+  "meetings": [
+    {
+      "id": "1",
+      "meetingAgenda": "Project Kickoff Meeting",
+      "meetingDateTime": "2024-01-15T10:00:00",
+      "clientId": 1
+    },
+    {
+      "id": "2",
+      "meetingAgenda": "Requirements Gathering",
+      "meetingDateTime": "2024-02-01T14:30:00",
+      "clientId": 2
+    },
+    {
+      "id": 3,
+      "meetingAgenda": "Planning and updates",
+      "clientId": 2,
+      "meetingDateTime": "2025-05-19T01:22"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+<!-- {
+    "id": "2",
+    "projectId": "PRJ002",
+    "projectName": "Mobile App Development",
+    "clientId": 2,
+    "duration": "6 months",
+    "startDate": "2024-02-01",
+    "endDate": "2024-07-31",
+    "status": "not started"
+  } -->
+  <div class="row justify-content-center align-items-center vh-100">
+    <div class="col-12 col-md-8 col-lg-6">
+        <div class="card shadow-lg form-container">
+            <div class="card-header text-center bg-primary text-white">
+                <h3>Project Register</h3>
+            </div>
+            <div class="card-body px-5">
+                <form [formGroup]="projectForm" (ngSubmit)="addproject()" >
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="floatingid" placeholder="Project ID"  formControlName="id" name="id" oncopy="return false" onpaste="return false" oncut="return false" ondrag="return false" ondrop="return false" autocomplete="off">
+                        <label for="floatingid"> Project ID</label>
+                        <span class="errorinfo" *ngIf="projectForm.controls['id'].invalid&&projectForm.controls['id'].touched">please enter the valid input</span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" required id="floatingName" placeholder="Project Name" formControlName="projectName" name="projectName" oncopy="return false" onpaste="return false" oncut="return false" ondrag="return false" ondrop="return false" autocomplete="off">
+                        <label for="floatingName">Project Name</label>
+                        <span class="errorinfo" *ngIf="projectForm.controls['projectName'].invalid&&projectForm.controls['projectName'].touched">please enter the valid input</span>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" required id="floatingduration" placeholder="Duration" formControlName="duration" name="Duration" oncopy="return false" onpaste="return false" oncut="return false" ondrag="return false" ondrop="return false" autocomplete="off">
+                      <label for="floatingduration">Duration</label>
+                      <span class="errorinfo" *ngIf="projectForm.controls['duration'].invalid && projectForm.controls['duration'].touched">please enter the valid input</span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="floatingclient" placeholder="Client ID"  formControlName="clientId">
+                        <label for="floatingclient">Client ID</label>
+                        <span class="errorinfo" *ngIf="projectForm.controls['clientId'].invalid && projectForm.controls['clientId'].touched">
+                            Please enter a valid client ID
+                        </span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="date" class="form-control" id="floatingStartDate" formControlName="startDate">
+                        <label for="floatingStartDate">Start Date</label>
+                        <span class="errorinfo" *ngIf="projectForm.controls['startDate'].invalid && projectForm.controls['startDate'].touched">
+                            Please enter a valid start date
+                        </span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="date" class="form-control" id="floatingEndDate" formControlName="endDate">
+                        <label for="floatingEndDate">End Date</label>
+                        <span class="errorinfo" *ngIf="projectForm.controls['endDate'].invalid && projectForm.controls['endDate'].touched">
+                            Please enter a valid end date
+                        </span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <select class="form-control" id="floatingStatus" formControlName="status">
+                            <option value="" disabled selected>Select Status</option>
+                            <option value="Pending">Pending</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Completed">Completed</option>
+                        </select>
+                        <label for="floatingStatus">Status</label>
+                        <span class="errorinfo" *ngIf="projectForm.controls['status'].invalid && projectForm.controls['status'].touched">
+                            Please select a valid status
+                        </span>
+                    </div>                    
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-outline-success" [disabled]="projectForm.invalid">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>  

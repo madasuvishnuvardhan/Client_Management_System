@@ -1,0 +1,45 @@
+<!-- "id": "1",
+"meetingId": "MTG001",
+"meetingAgenda": "Project Kickoff Meeting",
+"meetingDateTime": "2024-01-15T10:00:00",
+"clientId": 1 -->
+<div class="row justify-content-center align-items-center vh-100">
+    <div class="col-12 col-md-8 col-lg-6">
+        <div class="card shadow-lg form-container">
+            <div class="card-header text-center bg-primary text-white">
+                <h3>Project Register</h3>
+            </div>
+            <div class="card-body px-5">
+                <form [formGroup]="meetingForm" (ngSubmit)="addMeeting()" >
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="floatingid" placeholder="Meeting Id"  formControlName="id" name="id" oncopy="return false" onpaste="return false" oncut="return false" ondrag="return false" ondrop="return false" autocomplete="off">
+                        <label for="floatingid"> Meeting Id</label>
+                        <span class="errorinfo" *ngIf="meetingForm.controls['id'].invalid&&meetingForm.controls['id'].touched">please enter the valid input</span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" required id="floatingagenda" placeholder="Agenda" formControlName="meetingAgenda" name="meetingAgenda" oncopy="return false" onpaste="return false" oncut="return false" ondrag="return false" ondrop="return false" autocomplete="off">
+                        <label for="floatingagenda">Agenda</label>
+                        <span class="errorinfo" *ngIf="meetingForm.controls['meetingAgenda'].invalid&&meetingForm.controls['meetingAgenda'].touched">please enter the valid input</span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="floatingclient" placeholder="Client ID"  formControlName="clientId">
+                        <label for="floatingclient">Client ID</label>
+                        <span class="errorinfo" *ngIf="meetingForm.controls['clientId'].invalid && meetingForm.controls['clientId'].touched">
+                            Please enter a valid client ID
+                        </span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="datetime-local" class="form-control" id="floatingmeetingDateTime" formControlName="meetingDateTime">
+                        <label for="floatingmeetingDateTime">Meeting Date Time</label>
+                        <span class="errorinfo" *ngIf="meetingForm.controls['meetingDateTime'].invalid && meetingForm.controls['meetingDateTime'].touched">
+                            Please enter a valid start date
+                        </span>
+                    </div>                    
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-outline-success" [disabled]="meetingForm.invalid">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>  
