@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-meeting',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './meeting.component.html',
   styleUrl: './meeting.component.css'
 })
@@ -14,8 +15,8 @@ constructor(private dataservice:DataService){
 
 }
 ngOnInit(){
-    this.dataservice.getMeetings().subscribe(data =>{
-      this.meetings=data.meetings;
+    this.dataservice.getData('meetings').subscribe(data =>{
+      this.meetings=data;
     })
 }
 }

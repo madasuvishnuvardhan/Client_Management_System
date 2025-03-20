@@ -26,7 +26,7 @@
       "name": "Vishnu ",
       "email": "Vishnu@gmail.com",
       "address": "main 1086,wrg",
-      "password": "Vishnu@123"
+      "password": "encrypted_password"
     }
   ],
   "projects": [
